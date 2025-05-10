@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.content-container {
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Color palette */
+:root {
+  --primary-light-green: #e8f5e9;
+  --secondary-light-green: #c8e6c9;
+  --accent-green: #81c784;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --white: #ffffff;
+}
+
+/* Add these animations to your existing App.css */
+/* ===== ENTRANCE ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gentlePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* ===== APPLICATION STYLES ===== */
+.app {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.header {
+  animation: slideInFromTop 0.6s ease-out;
+}
+
+/* Button hover effects */
+.nav-button {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 }
+
+/* Card animations */
+.card, .tutor-card {
+  transition: all 0.3s ease;
+  animation: gentlePulse 3s infinite;
+  &:hover {
+    animation: none;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+}
+
+/* Form elements */
+.submit-btn {
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #81C784, #66BB6A);
+  &:hover {
+    background: linear-gradient(to right, #66BB6A, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+  }
+}
+

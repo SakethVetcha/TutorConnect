@@ -1,0 +1,84 @@
+.feedback-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .rating-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .star-label {
+    font-size: 2rem;
+    color: #ffc107;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .star-label:hover {
+    transform: scale(1.2);
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .btn-submit {
+    background: #81c784;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .btn-submit:hover {
+    background: #2e7d32;
+  }
+  
+  /* Thank you message */
+  .feedback-container p {
+    text-align: center;
+    margin: 1rem 0;
+    color: #555;
+  }
