@@ -1,4 +1,9 @@
 {
+  "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+
   "homepage": "https://SakethVetcha.github.io/TutorConnect"
 
   "name": "project",
